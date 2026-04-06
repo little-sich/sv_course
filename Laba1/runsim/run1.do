@@ -1,5 +1,7 @@
-vlog ../LogicFunc.sv
-vlog ../LogicFunc_testbench.sv
+vlib work
+
+vlog ../src/LogicFunc.sv
+vlog ../tests/LogicFunc_testbench.sv
 
 vsim -c work.LogicFunc_testbench
 

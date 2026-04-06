@@ -23,10 +23,10 @@ module Demultiplexer17(
             5'd15: y[14] = x;
             5'd16: y[15] = x;
             5'd17: y[16] = x;
-            
+
             default: y = 0;
         endcase
     end
-    
+
 endmodule
 

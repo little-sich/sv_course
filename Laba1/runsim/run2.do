@@ -1,8 +1,11 @@
-vlog ../LogicFunc.sv
-vlog ../Decoder15.sv
-vlog ../Demultiplexer17.sv
-vlog ../CompleteCircuit.sv
-vlog ../CompleteCircuit_testbench.sv
+vlib work
+
+vlog ../src/LogicFunc.sv
+vlog ../src/Decoder15.sv
+vlog ../src/Demultiplexer17.sv
+vlog ../src/CompleteCircuit.sv
+
+vlog ../tests/CompleteCircuit_testbench.sv
 
 vsim -c work.CompleteCircuit_testbench
 
