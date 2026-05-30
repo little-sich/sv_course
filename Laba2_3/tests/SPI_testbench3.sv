@@ -72,7 +72,7 @@ module SPI_testbench3 #(parameter INPUT_W=4, parameter OUTPUT_W=96) ();
                 ss = 0;
                 mosi = test_data[i] [k*INPUT_W-1 -: 4];
 
-                $display("++ INPUT k => MOSI: %d, SCK: %d, SS: %d", k, mosi, sck, ss);
+                //$display("++ INPUT k => MOSI: %d, SCK: %d, SS: %d", k, mosi, sck, ss);
                 @(posedge sck);
             end
 
@@ -92,9 +92,8 @@ module SPI_testbench3 #(parameter INPUT_W=4, parameter OUTPUT_W=96) ();
             @(posedge valid);
             if (data !== ethalon_data[i]) begin
                 error_counter++;
-                $display ("output_data %d", data);
-                $display ("ethalon_data %d", ethalon_data[i]);
             end
+            $display ("output_data: %d, ethalon_data: %d", data, ethalon_data[i]);
         end
 
         if (error_counter > 0) begin

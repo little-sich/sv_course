@@ -47,7 +47,6 @@ module SPI #(parameter INPUT_W=4, parameter OUTPUT_W=96) (
     logic[INPUT_W-1:0] o_from_mosi_mux;
     assign o_from_mosi_mux = ~i_ss ? i_mosi : 'z;
 
-    // always_ff @(posedge i_clk) o_miso <= o_from_mosi_mux;
     assign o_miso = o_from_mosi_mux;
 
 endmodule

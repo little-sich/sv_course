@@ -13,7 +13,7 @@ module Counter #(parameter INPUT_W=4, parameter DELAY=24) (
             if (o_to) begin
                 count <= '0;
             end else if (i_enable) begin
-                count <= count + 1;
+                count <= count + '1;
             end
         end
     end
