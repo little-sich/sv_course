@@ -1,4 +1,4 @@
 **/quartus/**
-!**/quartus/*.qpf
+!**/quartus/**/*.qpf
 **/runsim/**
 !**/runsim/*.do
